@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emporio DevWill</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <nav class="menu">
+    <a href="#" class="logo">
+      <img src="./img/logo (1).png" width="100px" alt="Logo">
+    </a>
+
+    <ul class="links">
+      <li><a href="#">Início</a></li>
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+
+    <div class="cart-icon" onclick="toggleCart()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+
+<section class="hero">
+  <img src="./img/img1.png" alt="Vinhos">
+  <div class="hero-text">
+    <h1>Seleção Premium de Vinhos</h1>
+    <p>Experiência exclusiva para paladares exigentes</p>
+  </div>
+</section>
+
+
+<section class="produtos" id="produtos">
+
+ 
+  <div class="categoria-gaveta">
+    <h2 class="gaveta-title">Vinhos Tintos ▼</h2>
+    <div class="gaveta-content">
+      <div class="produto">
+        <img src="./img/vinho_tinto_rola_reserva_6326_1_f7acbd22dfa3759cdb0d6ca50eaaeb73.webp" alt="Tinto Reserva">
+        <h3>Tinto Reserva</h3>
+        <p>R$ 889.90</p>
+        <button onclick="addToCart('Tinto Reserva', 889.90)">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="./img/vinho-tinto-fino-seco-malbec-750ml-di-mallo-emporio-rosa_jpg.webp" alt="Tinto Seco">
+        <h3>Tinto Seco</h3>
+        <p>R$ 869.90</p>
+        <button onclick="addToCart('Tinto Seco', 869.90)">Comprar</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="categoria-gaveta">
+    <h2 class="gaveta-title">Vinhos Brancos ▼</h2>
+    <div class="gaveta-content">
+      <div class="produto">
+        <img src="./img/Cordero-con-Piel-de-Lobo-Chardonnay-2020-Oferta.jpg" alt="Branco Suave">
+        <h3>Branco Suave</h3>
+        <p>R$ 779.90</p>
+        <button onclick="addToCart('Branco Suave', 779.90)">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="./img/71-GPZ6lYZL.jpg" alt="Branco Seco">
+        <h3>Branco Seco</h3>
+        <p>R$ 769.90</p>
+        <button onclick="addToCart('Branco Seco', 769.90)">Comprar</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="categoria-gaveta">
+    <h2 class="gaveta-title">Vinhos Rosés ▼</h2>
+    <div class="gaveta-content">
+      <div class="produto">
+        <img src="./img/00000.jpg" alt="Rosé Delicado">
+        <h3>Rosé Delicado</h3>
+        <p>R$ 974.90</p>
+        <button onclick="addToCart('Rosé Delicado', 974.90)">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="./img/001.jpg" alt="Rosé Espumante">
+        <h3>Rosé Espumante</h3>
+        <p>R$ 984.90</p>
+        <button onclick="addToCart('Rosé Espumante', 984.90)">Comprar</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+</main>
+
+
+<div class="cart" id="cart">
+  <h3>Carrinho</h3>
+  <ul id="cart-items">
+    <li style="color: #999; text-align: center; padding: 20px;">Carrinho vazio</li>
+  </ul>
+  <div class="cart-total">
+    <p>Total: R$ <span id="total-price">0.00</span></p>
+    <button class="btn-checkout">Finalizar Compra</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
